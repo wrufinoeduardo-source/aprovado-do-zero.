@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aprovado do Zero — O método de 90 dias para passar em concurso público</title>
+<meta name="description" content="Descubra o método que já ajudou centenas de pessoas a passar em concurso público sem gastar uma fortuna em cursinhos.">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  /* ============================
+     RESET & BASE
+  ============================ */
+  :root{
+    --primary: #0C447C;
+    --primary-dark: #08325c;
+    --accent: #EF9F27;
+    --cta: #2E7D32;
+    --cta-dark: #235c26;
+    --bg-light: #F8F8F8;
+    --text-dark: #1c1c1c;
+    --text-muted: #5a5a5a;
+    --border-color: #e6e6e6;
+    --max-width: 720px;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  html { scroll-behavior:smooth; }
+
+  body{
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight:400;
+    color:var(--text-dark);
+    line-height:1.6;
+    background:#fff;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  img{ max-width:100%; display:block; }
+
+  a{ text-decoration:none; color:inherit; }
+
+  ul{ list-style:none; }
+
+  .container{
+    max-width:var(--max-width);
+    margin:0 auto;
+    padding:0 20px;
+  }
+
+  section{ padding:64px 0; }
+
+  .bg-light{ background:var(--bg-light); }
+
+  h1,h2,h3{ font-weight:700; line-height:1.25; color:var(--primary); }
+
+  h2.section-title{
+    font-size:28px;
+    text-align:center;
+    margin-bottom:12px;
+  }
+
+  p.section-sub{
+    text-align:center;
+    color:var(--text-muted);
+    max-width:560px;
+    margin:0 auto 40px;
+    font-size:16px;
+  }
+
+  /* ============================
+     BUTTONS
+  ============================ */
+  .btn{
+    display:inline-block;
+    font-weight:600;
+    text-align:center;
+    border-radius:8px;
+    cursor:pointer;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+    border:none;
+  }
+
+  .btn-cta{
+    background:var(--cta);
+    color:#fff;
+    padding:18px 36px;
+    font-size:18px;
+    box-shadow:0 4px 14px rgba(46,125,50,0.35);
+  }
+
+  .btn-cta:hover{
+    background:var(--cta-dark);
+    transform:translateY(-2px);
+    box-shadow:0 6px 18px rgba(46,125,50,0.45);
+  }
+
+  .btn-small{
+    background:var(--cta);
+    color:#fff;
+    padding:10px 20px;
+    font-size:14px;
+  }
+
+  .btn-small:hover{ background:var(--cta-dark); }
+
+  .btn-block{ display:block; width:100%; }
+
+  .btn-sub{
+    display:block;
+    text-align:center;
+    font-size:13px;
+    color:var(--text-muted);
+    margin-top:10px;
+  }
+
+  /* ============================
+     HEADER
+  ============================ */
+  header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:#fff;
+    border-bottom:1px solid var(--border-color);
+  }
+
+  header .container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-top:14px;
+    padding-bottom:14px;
+  }
+
+  .logo{
+    font-weight:800;
+    font-size:18px;
+    color:var(--primary);
+    letter-spacing:-0.02em;
+  }
+
+  .logo span{ color:var(--accent); }
+
+  /* ============================
+     HERO
+  ============================ */
+  .hero{
+    background:linear-gradient(180deg, #fff 0%, var(--bg-light) 100%);
+    padding:56px 0 60px;
+    text-align:center;
+  }
+
+  .hero .eyebrow{
+    display:inline-block;
+    background:rgba(12,68,124,0.08);
+    color:var(--primary);
+    font-size:13px;
+    font-weight:600;
+    padding:6px 14px;
+    border-radius:20px;
+    margin-bottom:20px;
+  }
+
+  .hero h1{
+    font-size:34px;
+    margin-bottom:18px;
+  }
+
+  .hero h1 em{
+    font-style:normal;
+    color:var(--accent);
+  }
+
+  .hero .subheadline{
+    font-size:18px;
+    color:var(--text-muted);
+    max-width:560px;
+    margin:0 auto 32px;
+  }
+
+  .hero-img{
+    margin-top:44px;
+    display:flex;
+    justify-content:center;
+  }
+
+  .hero-badges{
+    display:flex;
+    justify-content:center;
+    gap:24px;
+    margin-top:28px;
+    flex-wrap:wrap;
+    font-size:13px;
+    color:var(--text-muted);
+  }
+
+  .hero-badges span{ display:flex; align-items:center; gap:6px; }
+
+  /* ============================
+     DOR (PAIN) SECTION
+  ============================ */
+  .pain-list{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+  }
+
+  .pain-item{
+    display:flex;
+    gap:16px;
+    background:#fff;
+    border:1px solid var(--border-color);
+    border-radius:12px;
+    padding:22px;
+    align-items:flex-start;
+  }
+
+  .pain-icon{
+    flex-shrink:0;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:rgba(239,159,39,0.15);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+  }
+
+  .pain-item h3{
+    font-size:16px;
+    color:var(--text-dark);
+    margin-bottom:4px;
+  }
+
+  .pain-item p{
+    font-size:14px;
+    color:var(--text-muted);
+  }
+
+  /* ============================
+     SOLUTION SECTION
+  ============================ */
+  .solution-box{
+    background:var(--primary);
+    color:#fff;
+    border-radius:16px;
+    padding:40px 32px;
+    text-align:center;
+  }
+
+  .solution-box h2{
+    color:#fff;
+    font-size:26px;
+    margin-bottom:16px;
+  }
+
+  .solution-box p{
+    color:rgba(255,255,255,0.88);
+    font-size:16px;
+    max-width:560px;
+    margin:0 auto;
+  }
+
+  .solution-box strong{ color:var(--accent); }
+
+  /* ============================
+     BENEFITS LIST
+  ============================ */
+  .benefits-list{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+
+  .benefit-item{
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+    background:#fff;
+    border:1px solid var(--border-color);
+    border-radius:10px;
+    padding:16px 18px;
+  }
+
+  .check{
+    flex-shrink:0;
+    width:26px;
+    height:26px;
+    border-radius:50%;
+    background:var(--cta);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:14px;
+    font-weight:700;
+  }
+
+  .benefit-item p{ font-size:15.5px; color:var(--text-dark); }
+
+  /* ============================
+     EBOOK CONTENT / CHAPTERS
+  ============================ */
+  .chapters{
+    display:flex;
+    flex-direction:column;
+    gap:0;
+    border-radius:12px;
+    overflow:hidden;
+    border:1px solid var(--border-color);
+  }
+
+  .chapter-item{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    padding:20px 22px;
+    background:#fff;
+    border-bottom:1px solid var(--border-color);
+  }
+
+  .chapter-item:last-child{ border-bottom:none; }
+
+  .chapter-num{
+    flex-shrink:0;
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    background:var(--primary);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    font-size:16px;
+  }
+
+  .chapter-item h3{
+    font-size:15.5px;
+    color:var(--text-dark);
+    font-weight:600;
+    margin-bottom:2px;
+  }
+
+  .chapter-item p{
+    font-size:13.5px;
+    color:var(--text-muted);
+  }
+
+  /* ============================
+     TESTIMONIALS
+  ============================ */
+  .testimonials{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+  }
+
+  .testimonial-card{
+    background:#fff;
+    border:1px solid var(--border-color);
+    border-radius:12px;
+    padding:24px;
+  }
+
+  .stars{
+    color:var(--accent);
+    font-size:15px;
+    margin-bottom:12px;
+  }
+
+  .testimonial-card p.quote{
+    font-size:15px;
+    color:var(--text-dark);
+    margin-bottom:16px;
+  }
+
+  .testimonial-author{
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+
+  .avatar{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:var(--primary);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    font-size:15px;
+  }
+
+  .testimonial-author strong{ font-size:14px; display:block; }
+  .testimonial-author span{ font-size:12.5px; color:var(--text-muted); }
+
+  /* ============================
+     AUTHOR SECTION
+  ============================ */
+  .author-box{
+    display:flex;
+    gap:24px;
+    align-items:center;
+    background:#fff;
+    border:1px solid var(--border-color);
+    border-radius:12px;
+    padding:28px;
+  }
+
+  .author-avatar{
+    flex-shrink:0;
+    width:88px;
+    height:88px;
+    border-radius:50%;
+    background:var(--primary);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    font-size:28px;
+  }
+
+  .author-box h3{
+    font-size:18px;
+    color:var(--text-dark);
+    margin-bottom:6px;
+  }
+
+  .author-box p{
+    font-size:14px;
+    color:var(--text-muted);
+  }
+
+  /* ============================
+     PRICE BLOCK
+  ============================ */
+  .price-block{
+    background:var(--primary);
+    border-radius:18px;
+    padding:44px 32px;
+    text-align:center;
+    color:#fff;
+    position:relative;
+    overflow:hidden;
+  }
+
+  .price-block::before{
+    content:"";
+    position:absolute;
+    top:-60px;
+    right:-60px;
+    width:180px;
+    height:180px;
+    background:var(--accent);
+    opacity:0.15;
+    border-radius:50%;
+  }
+
+  .price-block h2{
+    color:#fff;
+    font-size:24px;
+    margin-bottom:24px;
+  }
+
+  .price-old{
+    font-size:18px;
+    color:rgba(255,255,255,0.6);
+    text-decoration:line-through;
+    margin-bottom:4px;
+  }
+
+  .price-new{
+    font-size:48px;
+    font-weight:800;
+    color:var(--accent);
+    margin-bottom:6px;
+  }
+
+  .price-new span{ font-size:22px; font-weight:600; }
+
+  .price-installment{
+    font-size:14px;
+    color:rgba(255,255,255,0.8);
+    margin-bottom:28px;
+  }
+
+  .price-block .btn-cta{
+    width:100%;
+    max-width:420px;
+  }
+
+  .price-includes{
+    margin-top:28px;
+    text-align:left;
+    max-width:360px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .price-includes li{
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+    font-size:14px;
+    color:rgba(255,255,255,0.9);
+    margin-bottom:10px;
+  }
+
+  /* ============================
+     GUARANTEE
+  ============================ */
+  .guarantee-box{
+    display:flex;
+    align-items:center;
+    gap:24px;
+    background:#fff;
+    border:2px dashed var(--accent);
+    border-radius:14px;
+    padding:28px;
+  }
+
+  .guarantee-seal{
+    flex-shrink:0;
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    background:var(--accent);
+    color:#fff;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    font-weight:800;
+    line-height:1.1;
+    text-align:center;
+    font-size:13px;
+  }
+
+  .guarantee-seal strong{ font-size:22px; display:block; }
+
+  .guarantee-box h3{
+    font-size:17px;
+    color:var(--text-dark);
+    margin-bottom:6px;
+  }
+
+  .guarantee-box p{
+    font-size:14px;
+    color:var(--text-muted);
+  }
+
+  /* ============================
+     FAQ ACCORDION
+  ============================ */
+  .faq-item{
+    border-bottom:1px solid var(--border-color);
+  }
+
+  .faq-question{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:16px;
+    padding:20px 4px;
+    cursor:pointer;
+    background:none;
+    border:none;
+    width:100%;
+    text-align:left;
+    font-family:inherit;
+    font-size:15.5px;
+    font-weight:600;
+    color:var(--text-dark);
+  }
+
+  .faq-icon{
+    flex-shrink:0;
+    width:24px;
+    height:24px;
+    border-radius:50%;
+    background:var(--bg-light);
+    color:var(--primary);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:16px;
+    font-weight:700;
+    transition:transform .2s ease;
+  }
+
+  .faq-item.active .faq-icon{ transform:rotate(45deg); }
+
+  .faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .25s ease;
+  }
+
+  .faq-answer p{
+    font-size:14.5px;
+    color:var(--text-muted);
+    padding:0 4px 20px;
+  }
+
+  /* ============================
+     FINAL CTA
+  ============================ */
+  .final-cta{
+    text-align:center;
+    background:linear-gradient(180deg, var(--bg-light) 0%, #fff 100%);
+  }
+
+  .final-cta h2{
+    font-size:26px;
+    margin-bottom:14px;
+  }
+
+  .final-cta p{
+    color:var(--text-muted);
+    font-size:15px;
+    margin-bottom:28px;
+  }
+
+  .final-price{
+    font-size:20px;
+    font-weight:700;
+    color:var(--primary);
+    margin-bottom:24px;
+  }
+
+  .final-price span{
+    text-decoration:line-through;
+    color:var(--text-muted);
+    font-weight:400;
+    font-size:16px;
+    margin-right:8px;
+  }
+
+  /* ============================
+     FOOTER
+  ============================ */
+  footer{
+    background:var(--primary-dark);
+    color:rgba(255,255,255,0.75);
+    padding:36px 0;
+    text-align:center;
+    font-size:13px;
+  }
+
+  footer p{ margin-bottom:6px; }
+
+  footer a{ text-decoration:underline; }
+
+  /* ============================
+     RESPONSIVE
+  ============================ */
+  @media (max-width:600px){
+    .hero h1{ font-size:26px; }
+    .hero .subheadline{ font-size:16px; }
+    h2.section-title{ font-size:22px; }
+    .author-box{ flex-direction:column; text-align:center; }
+    .guarantee-box{ flex-direction:column; text-align:center; }
+    .price-new{ font-size:38px; }
+    .btn-cta{ width:100%; padding:16px 20px; font-size:16px; }
+    section{ padding:48px 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ transition:none !important; scroll-behavior:auto !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================
+     1. HEADER
+============================ -->
+<header>
+  <div class="container">
+    <div class="logo">Aprovado<span>DoZero</span></div>
+    <a href="#comprar" class="btn btn-small">Comprar agora</a>
+  </div>
+</header>
+
+<!-- ============================
+     2. HERO
+============================ -->
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">Método comprovado · 90 dias</span>
+    <h1>Descubra o método que já ajudou centenas de pessoas a passar em <em>concurso público</em> sem gastar uma fortuna em cursinhos</h1>
+    <p class="subheadline">Em 90 dias, do zero ao aprovado — com plano de estudos passo a passo, técnicas comprovadas e sem precisar largar o emprego.</p>
+    <a href="#comprar" class="btn btn-cta">Quero me tornar servidor público por R$ 47</a>
+    <div class="hero-badges">
+      <span>✓ Acesso imediato</span>
+      <span>✓ Garantia de 7 dias</span>
+      <span>✓ Formato PDF</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     3. SEÇÃO DE DOR
+============================ -->
+<section class="bg-light">
+  <div class="container">
+    <h2 class="section-title">Isso já aconteceu com você?</h2>
+    <p class="section-sub">Se você se identificar com pelo menos uma dessas situações, este ebook foi feito pra você.</p>
+    <div class="pain-list">
+      <div class="pain-item">
+        <div class="pain-icon">📚</div>
+        <div>
+          <h3>Você abre o edital e não sabe por onde começar</h3>
+          <p>Tanto conteúdo, tantas matérias, e nenhuma clareza sobre o que estudar primeiro. O resultado é a sensação de estar sempre atrasado.</p>
+        </div>
+      </div>
+      <div class="pain-item">
+        <div class="pain-icon">💸</div>
+        <div>
+          <h3>Você acha que precisa de um cursinho caro para passar</h3>
+          <p>Mensalidades de centenas de reais parecem o único caminho — e isso te afasta ainda mais do seu objetivo.</p>
+        </div>
+      </div>
+      <div class="pain-item">
+        <div class="pain-icon">⏰</div>
+        <div>
+          <h3>Você trabalha o dia todo e não sobra tempo para estudar</h3>
+          <p>Entre o emprego, a família e o cansaço, parece impossível montar uma rotina de estudos que funcione de verdade.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     4. SEÇÃO DE SOLUÇÃO
+============================ -->
+<section>
+  <div class="container">
+    <div class="solution-box">
+      <h2>A solução: um método simples e direto ao ponto</h2>
+      <p>O <strong>Aprovado do Zero</strong> é um ebook prático que te mostra exatamente o que estudar, em que ordem e com que frequência — mesmo que você tenha pouco tempo e nenhuma experiência prévia com concursos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     5. O QUE VOCÊ VAI APRENDER
+============================ -->
+<section class="bg-light">
+  <div class="container">
+    <h2 class="section-title">O que você vai aprender</h2>
+    <p class="section-sub">Um passo a passo completo para organizar seus estudos e chegar preparado no dia da prova.</p>
+    <div class="benefits-list">
+      <div class="benefit-item"><div class="check">✓</div><p>Como escolher o concurso certo para o seu perfil e momento de vida</p></div>
+      <div class="benefit-item"><div class="check">✓</div><p>Como montar um cronograma de estudos realista mesmo trabalhando 8h por dia</p></div>
+      <div class="benefit-item"><div class="check">✓</div><p>A técnica de estudo ativo que aumenta sua retenção de conteúdo em até 3x</p></div>
+      <div class="benefit-item"><div class="check">✓</div><p>Como interpretar editais e focar apenas no que realmente cai na prova</p></div>
+      <div class="benefit-item"><div class="check">✓</div><p>Estratégias para resolver questões com mais velocidade e menos erro</p></div>
+      <div class="benefit-item"><div class="check">✓</div><p>Como usar a técnica de revisão espaçada para não esquecer o que estudou</p></div>
+      <div class="benefit-item"><div class="check">✓</div><p>Como manter a motivação e a disciplina ao longo dos 90 dias</p></div>
+      <div class="benefit-item"><div class="check">✓</div><p>O que fazer na semana da prova para chegar confiante e descansado</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     6. CONTEÚDO DO EBOOK
+============================ -->
+<section>
+  <div class="container">
+    <h2 class="section-title">O que tem dentro do ebook</h2>
+    <p class="section-sub">7 capítulos práticos, direto ao ponto, sem enrolação.</p>
+    <div class="chapters">
+      <div class="chapter-item">
+        <div class="chapter-num">1</div>
+        <div><h3>Escolhendo o concurso certo</h3><p>Como definir seu foco sem se perder em dezenas de opções</p></div>
+      </div>
+      <div class="chapter-item">
+        <div class="chapter-num">2</div>
+        <div><h3>Lendo o edital como um aprovado</h3><p>O que realmente importa e o que você pode ignorar</p></div>
+      </div>
+      <div class="chapter-item">
+        <div class="chapter-num">3</div>
+        <div><h3>Montando seu cronograma de 90 dias</h3><p>Um plano realista para quem trabalha em horário integral</p></div>
+      </div>
+      <div class="chapter-item">
+        <div class="chapter-num">4</div>
+        <div><h3>Técnicas de estudo que funcionam</h3><p>Estudo ativo, mapas mentais e revisão espaçada na prática</p></div>
+      </div>
+      <div class="chapter-item">
+        <div class="chapter-num">5</div>
+        <div><h3>Resolvendo questões com estratégia</h3><p>Como treinar velocidade e precisão nas provas objetivas</p></div>
+      </div>
+      <div class="chapter-item">
+        <div class="chapter-num">6</div>
+        <div><h3>Mantendo a disciplina ao longo do caminho</h3><p>O que fazer nos dias difíceis, de cansaço e desmotivação</p></div>
+      </div>
+      <div class="chapter-item">
+        <div class="chapter-num">7</div>
+        <div><h3>A reta final antes da prova</h3><p>Como organizar a última semana para chegar no seu melhor dia</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     7. DEPOIMENTOS
+============================ -->
+<section class="bg-light">
+  <div class="container">
+    <h2 class="section-title">Quem já usou, recomenda</h2>
+    <p class="section-sub">Histórias reais de quem aplicou o método e mudou de vida.</p>
+    <div class="testimonials">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"Eu tentei estudar por conta própria umas 3 vezes e sempre desistia no meio do caminho. O cronograma do ebook foi o que me fez finalmente organizar a rotina. Passei em 2º lugar no meu primeiro concurso depois disso."</p>
+        <div class="testimonial-author">
+          <div class="avatar">MF</div>
+          <div><strong>Marina Ferreira</strong><span>Aprovada — Tribunal Regional, 2025</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"Trabalho 44h por semana e achava impossível estudar para concurso. O método me mostrou como usar bem o pouco tempo que eu tinha. Valeu cada centavo, e olha que é bem mais barato que cursinho."</p>
+        <div class="testimonial-author">
+          <div class="avatar">RA</div>
+          <div><strong>Rodrigo Almeida</strong><span>Aprovado — Prefeitura Municipal, 2025</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"O capítulo sobre revisão espaçada mudou completamente minha forma de estudar. Eu decorava e esquecia tudo depois de uma semana. Com a técnica certa, o conteúdo realmente ficou."</p>
+        <div class="testimonial-author">
+          <div class="avatar">CS</div>
+          <div><strong>Camila Santos</strong><span>Aprovada — Instituto Federal, 2024</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     8. SOBRE O AUTOR
+============================ -->
+<section>
+  <div class="container">
+    <h2 class="section-title">Sobre o autor</h2>
+    <div class="author-box">
+      <div class="author-avatar">JP</div>
+      <div>
+        <h3>João Pereira</h3>
+        <p>Servidor público concursado, formado em Administração, com mais de 8 anos de experiência estudando e orientando candidatos a concursos públicos. Já ajudou centenas de pessoas a organizarem sua rotina de estudos e conquistarem a aprovação, mesmo com pouco tempo disponível e sem gastar com cursinhos caros.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     9. BLOCO DE PREÇO
+============================ -->
+<section id="comprar" class="bg-light">
+  <div class="container">
+    <div class="price-block">
+      <h2>Garanta seu acesso agora</h2>
+      <div class="price-old">De R$ 197,00</div>
+      <div class="price-new">R$ 47<span>,00</span></div>
+      <div class="price-installment">ou 2x de R$ 24,90 no cartão</div>
+      <a href="#comprar" class="btn btn-cta btn-block">Quero me tornar servidor público por R$ 47</a>
+      <ul class="price-includes">
+        <li>✓ Ebook completo em PDF, com 7 capítulos</li>
+        <li>✓ Acesso imediato após a confirmação do pagamento</li>
+        <li>✓ Leitura em qualquer dispositivo — celular, tablet ou computador</li>
+        <li>✓ Garantia de 7 dias com reembolso total</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     10. GARANTIA
+============================ -->
+<section>
+  <div class="container">
+    <div class="guarantee-box">
+      <div class="guarantee-seal"><strong>7</strong>DIAS</div>
+      <div>
+        <h3>Garantia incondicional de 7 dias</h3>
+        <p>Se por qualquer motivo você não gostar do conteúdo, basta enviar um e-mail dentro de 7 dias após a compra e devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     11. FAQ
+============================ -->
+<section class="bg-light">
+  <div class="container">
+    <h2 class="section-title">Perguntas frequentes</h2>
+    <div id="faq">
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Como recebo o ebook depois da compra?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>O acesso é imediato. Após a confirmação do pagamento, você recebe um e-mail com o link para download do PDF e pode começar a estudar na hora, de qualquer dispositivo.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Funciona para qualquer tipo de concurso?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Sim. O método ensina como organizar seus estudos, interpretar editais e treinar questões de forma estratégica — princípios que se aplicam a concursos municipais, estaduais, federais e para qualquer área de atuação.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          E se eu tiver pouco tempo para estudar no dia a dia?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>O ebook foi criado justamente para quem trabalha em horário integral. O capítulo 3 ensina a montar um cronograma realista, mesmo com poucas horas disponíveis por dia.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          E se eu não gostar do conteúdo?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Você tem 7 dias de garantia incondicional. Se não gostar por qualquer motivo, basta pedir o reembolso e devolvemos 100% do valor pago, sem burocracia.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Preciso de algum curso ou material extra para acompanhar?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Não. O ebook é autossuficiente e contém tudo o que você precisa para montar sua rotina de estudos do zero. Qualquer material complementar mencionado é opcional.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     12. CTA FINAL
+============================ -->
+<section class="final-cta">
+  <div class="container">
+    <h2>Sua aprovação pode começar hoje</h2>
+    <p>Sem cursinho caro. Sem enrolação. Apenas um método direto para te levar do zero à aprovação em 90 dias.</p>
+    <div class="final-price"><span>R$ 197,00</span> R$ 47,00 — ou 2x de R$ 24,90</div>
+    <a href="#comprar" class="btn btn-cta">Garantir meu acesso agora</a>
+  </div>
+</section>
+
+<!-- ============================
+     13. RODAPÉ
+============================ -->
+<footer>
+  <div class="container">
+    <p>© 2026 Aprovado do Zero. Todos os direitos reservados.</p>
+    <p>Compra 100% segura, processada pela Hotmart. Garantia de reembolso total em até 7 dias após a compra.</p>
+    <p><a href="#comprar">Política de reembolso</a> · <a href="#comprar">Termos de uso</a></p>
+  </div>
+</footer>
+
+<!-- ============================
+     JAVASCRIPT: FAQ ACCORDION
+============================ -->
+<script>
+  // Seleciona todos os itens do FAQ
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+
+    question.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+
+      // Fecha todos os outros itens (comportamento de accordion exclusivo)
+      faqItems.forEach(other => {
+        other.classList.remove('active');
+        other.querySelector('.faq-answer').style.maxHeight = null;
+      });
+
+      // Abre o item clicado, se ele não estava ativo antes
+      if (!isActive) {
+        item.classList.add('active');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // ============================
+  // Substituir os links "#comprar" pelo link real da Hotmart
+  // Basta alterar a constante abaixo:
+  // ============================
+  const LINK_HOTMART = 'https://pay.kiwify.com.br/35VVhix';
+
+  document.querySelectorAll('a[href="#comprar"]').forEach(link => {
+    if (LINK_HOTMART !== '#comprar') {
+      link.setAttribute('href', LINK_HOTMART);
+    }
+  });
+</script>
+
+</body>
+</html>
